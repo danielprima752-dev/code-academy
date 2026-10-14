@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding Academy | Belajar Coding Masa Depan</title>
+<style>
+:root{--navy:#101a35;--blue:#4f7cff;--cyan:#58d5e8;--ink:#17223b;--muted:#65718a;--paper:#f5f7fc;--white:#fff;--line:#e4e9f3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--paper);color:var(--ink)}
+header{background:rgba(16,26,53,.97);color:white;position:sticky;top:0;z-index:10;box-shadow:0 6px 24px #101a3520}
+.nav{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:16px 22px;gap:20px}.brand{font-size:1.18rem;font-weight:800;letter-spacing:.2px}.brand span{color:var(--cyan)}
+nav{display:flex;gap:8px;flex-wrap:wrap}nav button{border:0;background:transparent;color:#dce5ff;padding:11px 15px;border-radius:10px;font-weight:700;cursor:pointer}nav button.active,nav button:hover{background:var(--blue);color:white}
+main{max-width:1120px;margin:auto;padding:30px 22px 60px}.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:center;background:linear-gradient(125deg,#111d3c,#253f78);border-radius:25px;padding:42px;color:white;overflow:hidden;position:relative}.eyebrow{color:var(--cyan);font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(2.1rem,5vw,3.7rem);line-height:1.08;margin:14px 0}.hero p{color:#d7e0f7;line-height:1.75;max-width:540px}.hero img{width:100%;height:270px;object-fit:cover;border-radius:18px;box-shadow:0 18px 50px #0005}.primary{background:var(--blue);border:0;color:white;font-weight:800;padding:13px 18px;border-radius:11px;cursor:pointer;display:inline-block;text-decoration:none}.primary:hover{filter:brightness(1.08);transform:translateY(-1px)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:35px 0 18px}.section-head h2{margin:0;font-size:1.8rem}.section-head p{color:var(--muted);margin:7px 0 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 28px #17223b08}.card img{width:100%;height:190px;object-fit:cover;display:block}.card-body{padding:19px}.tag{display:inline-block;font-size:.75rem;font-weight:800;color:#315ee7;background:#edf1ff;padding:6px 9px;border-radius:99px}.card h3{margin:12px 0 8px}.card p{color:var(--muted);font-size:.94rem;line-height:1.65;margin:0}.view{display:none}.view.active{display:block}.form-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:24px;align-items:start}.info-panel{background:linear-gradient(145deg,#142144,#2d4b8c);color:white;padding:28px;border-radius:20px}.info-panel h2{margin-top:0;font-size:1.8rem}.info-panel p,.info-panel li{color:#dce5ff;line-height:1.7}.form-card{background:white;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 8px 28px #17223b08}.form-card h2{margin-top:0}.fields{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}label{font-weight:700;font-size:.9rem}input,select,textarea{width:100%;font:inherit;border:1px solid #d8deeb;border-radius:10px;padding:12px 13px;background:#fff;color:var(--ink);outline:none}input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #4f7cff20}textarea{resize:vertical;min-height:95px}.radio-row{display:flex;gap:18px;flex-wrap:wrap;padding:8px 0}.radio-row label{font-weight:500;display:flex;align-items:center;gap:7px}.radio-row input{width:auto}.form-actions{margin-top:22px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}.secondary{background:#edf1f8;color:#26324c;border:0;padding:13px 18px;border-radius:11px;font-weight:800;cursor:pointer}.result{margin-top:22px;border:1px solid #b9e7d2;background:#f0fff7;border-radius:14px;padding:20px;display:none}.result h3{margin-top:0;color:#176b46}.result dl{display:grid;grid-template-columns:170px 1fr;gap:10px;margin-bottom:0}.result dt{font-weight:800;color:#3c4b60}.result dd{margin:0;overflow-wrap:anywhere}.notice{color:var(--muted);font-size:.84rem;margin:14px 0 0}footer{background:var(--navy);color:#cdd7f1;text-align:center;padding:25px 20px;font-size:.9rem}
+@media(max-width:800px){.hero,.form-layout{grid-template-columns:1fr}.hero{padding:28px}.hero img{height:220px}.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.nav{align-items:flex-start;flex-direction:column}.grid,.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.section-head{align-items:flex-start;flex-direction:column}.form-card{padding:20px}.result dl{grid-template-columns:1fr;gap:4px}.result dd{margin-bottom:10px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="brand">⌘ CODING<span>ACADEMY</span></div><nav aria-label="Navigasi utama"><button class="nav-btn active" data-view="gallery">Gallery</button><button class="nav-btn" data-view="register">Pendaftaran</button></nav></div></header>
+<main>
+<section id="gallery" class="view active">
+  <div class="hero">
+    <div><div class="eyebrow">Learn · Build · Create</div><h1>Mulai Perjalanan Coding-mu.</h1><p>Belajar keterampilan digital bersama mentor, praktik lewat proyek nyata, dan kembangkan ide menjadi karya. Pilih kelas yang sesuai dengan minatmu!</p><button class="primary" onclick="showView('register')">Daftar Sekarang →</button></div>
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85'" alt="Peserta belajar teknologi bersama">
+  </div>
+  <div class="section-head"><div><h2>Gallery Kegiatan</h2><p>Cuplikan kegiatan dan pengalaman belajar di Coding Academy.</p></div></div>
+  <div class="grid">
+    <article class="card"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85" alt="Pelatihan pemrograman kelompok"><div class="card-body"><span class="tag">Workshop</span><h3>Workshop Dasar Pemrograman</h3><p>Peserta mempelajari logika algoritma, variabel, percabangan, dan perulangan melalui latihan interaktif bersama mentor.</p></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=85" alt="Kolaborasi tim mengerjakan proyek"><div class="card-body"><span class="tag">Team Project</span><h3>Kolaborasi Membuat Proyek</h3><p>Peserta bekerja dalam tim untuk merancang solusi digital, membagi tugas, dan mempresentasikan hasil proyek.</p></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=85" alt="Kode program pada layar komputer"><div class="card-body"><span class="tag">Web Development</span><h3>Membangun Website</h3><p>Praktik membuat halaman web menggunakan HTML, CSS, dan JavaScript dari rancangan sederhana hingga interaktif.</p></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=85" alt="Tampilan kode di komputer"><div class="card-body"><span class="tag">Coding Lab</span><h3>Eksplorasi Kode</h3><p>Latihan menulis kode, membaca pesan error, dan memperbaiki program agar berjalan sesuai tujuan.</p></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=85" alt="Diskusi dan belajar bersama"><div class="card-body"><span class="tag">Mentoring</span><h3>Diskusi Bersama Mentor</h3><p>Sesi tanya jawab dan evaluasi untuk membantu peserta memahami materi serta menemukan solusi dari tantangan coding.</p></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" alt="Tim mempresentasikan hasil pekerjaan"><div class="card-body"><span class="tag">Showcase</span><h3>Presentasi Hasil Karya</h3><p>Peserta mendemonstrasikan proyek yang telah dibuat dan menerima masukan untuk pengembangan selanjutnya.</p></div></article>
+  </div>
+</section>
+<section id="register" class="view">
+  <div class="section-head"><div><h2>Formulir Pendaftaran</h2><p>Isi data dengan benar untuk mendaftar program Coding Academy.</p></div></div>
+  <div class="form-layout">
+    <aside class="info-panel"><div class="eyebrow">Join our class</div><h2>Siap belajar hal baru?</h2><p>Lengkapi formulir di samping. Sebelum data ditampilkan, sistem akan meminta konfirmasi penyimpanan.</p><ul><li>Materi untuk pemula</li><li>Praktik dan proyek langsung</li><li>Pilihan bahasa pemrograman sesuai minat</li></ul></aside>
+    <div class="form-card">
+      <h2>Data Calon Peserta</h2>
+      <form id="registrationForm">
+        <div class="fields">
+          <div class="field"><label for="nik">NIK</label><input id="nik" name="nik" inputmode="numeric" pattern="[0-9]{16}" maxlength="16" placeholder="Masukkan 16 digit NIK" required title="NIK harus terdiri dari 16 digit angka"></div>
+          <div class="field"><label for="nama">Nama lengkap</label><input id="nama" name="nama" autocomplete="name" placeholder="Nama sesuai identitas" required></div>
+          <div class="field full"><label>Jenis kelamin</label><div class="radio-row"><label><input type="radio" name="gender" value="Laki-laki" required> Laki-laki</label><label><input type="radio" name="gender" value="Perempuan"> Perempuan</label></div></div>
+          <div class="field"><label for="hp">Nomor HP</label><input id="hp" name="hp" type="tel" inputmode="tel" placeholder="Contoh: 081234567890" required></div>
+          <div class="field"><label for="bahasa">Bahasa pemrograman diminati</label><select id="bahasa" name="bahasa" required><option value="">Pilih bahasa</option><option>Python</option><option>JavaScript</option><option>Java</option><option>PHP</option><option>C / C++</option><option>C#</option><option>HTML & CSS</option><option>Belum yakin</option></select></div>
+          <div class="field full"><label for="alamat">Alamat</label><textarea id="alamat" name="alamat" placeholder="Masukkan alamat lengkap" required></textarea></div>
+        </div>
+        <div class="form-actions"><button class="primary" type="submit">Simpan Pendaftaran</button><button class="secondary" type="reset">Reset Form</button></div>
+        <p class="notice">Demo pembelajaran: data hanya ditampilkan di halaman ini dan tidak dikirim ke server.</p>
+      </form>
+      <div id="result" class="result" role="status" aria-live="polite"><h3>✓ Data Pendaftaran Berhasil Disimpan</h3><p>Berikut hasil sesuai isian formulir:</p><dl id="resultData"></dl></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>© 2026 Coding Academy · Belajar hari ini, bangun masa depan.</footer>
+<script>
+const navButtons = document.querySelectorAll('.nav-btn');
+function showView(name){
+  document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===name));
+  navButtons.forEach(b=>b.classList.toggle('active',b.dataset.view===name));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+navButtons.forEach(button=>button.addEventListener('click',()=>showView(button.dataset.view)));
+const form=document.getElementById('registrationForm');
+const result=document.getElementById('result');
+form.addEventListener('submit',function(event){
+  event.preventDefault();
+  if(!form.reportValidity()) return;
+  const yakin=window.confirm('Apakah Anda sudah yakin untuk menyimpan?');
+  if(!yakin) return;
+  const data=new FormData(form);
+  const items=[
+    ['NIK',data.get('nik')],
+    ['Nama lengkap',data.get('nama')],
+    ['Jenis kelamin',data.get('gender')],
+    ['No. HP',data.get('hp')],
+    ['Alamat',data.get('alamat')],
+    ['Bahasa pemrograman diminati',data.get('bahasa')]
+  ];
+  const dl=document.getElementById('resultData');
+  dl.replaceChildren();
+  items.forEach(([label,value])=>{
+    const dt=document.createElement('dt');dt.textContent=label;
+    const dd=document.createElement('dd');dd.textContent=value;
+    dl.append(dt,dd);
+  });
+  result.style.display='block';
+  result.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+form.addEventListener('reset',()=>{result.style.display='none';});
+</script>
+</body>
+</html>
